@@ -2,3 +2,5 @@
 node_modules
 #Ignore compiled JavaScript folder
 dist
+#Ignore text files (used for notes)
+*.txt
