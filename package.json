@@ -1,0 +1,11 @@
+{
+  "name": "bb26-spreadsheet",
+  "version": "0.0.1",
+  "description": "Bijective base 26 number system represented using letters A-Z handling utilities for microsoft excel and general purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Stephen Charbonneau",
+  "license": "ISC"
+}
