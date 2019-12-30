@@ -1,0 +1,69 @@
+{
+    "bb26toDecimalInputTest": [
+        {
+            "input": "C",
+            "result": 3
+        },
+        {
+            "input": "E",
+            "result": 5
+        },
+        {
+            "input": "S",
+            "result": 19
+        },
+        {
+            "input": "CE",
+            "result": 83
+        },
+        {
+            "input": "SC",
+            "result": 497
+        },
+        {
+            "input": "ZZ",
+            "result": 702
+        },
+        {
+            "input": "AAZ",
+            "result": 728
+        },
+        {
+            "input": "ABC",
+            "result": 731
+        },
+        {
+            "input": "ZZA",
+            "result": 18253
+        },
+        {
+            "input": "SSSS",
+            "result": 347301
+        },
+        {
+            "input": "AZAZA",
+            "result": 915305
+        },
+        {
+            "input": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "result": 2.5609457453661776e35
+        }
+    ],
+    "bb26toDecimalInvalidInputTest": [
+        {
+            "input": "123",
+            "result": "Input string may only contain upper case letters",
+            "error": "TypeError"
+        },
+        {
+            "input": "123",
+            "result": "Input string may only contain upper case letters",
+            "error": "TypeError"
+        },
+        {
+            "input": "123",
+            "result": "Input string may only contain upper case letters",
+            "error": "TypeError"
+        }
+    ]
+}
