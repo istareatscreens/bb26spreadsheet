@@ -5,8 +5,8 @@
  *@example bb26ToDecimal("AZ"); // output: 52
  */
 export default function bb26ToDecimal(input: string): number {
-    if (!/[A-Z]/.test(input))
-        throw new Error("Input string may only contain upper case letters");
+    if (!/^[A-Z]+$/.test(input))
+        throw new TypeError("Input string may only contain upper case letters");
     return iteratebb26ToDecimal(input);
 }
 
