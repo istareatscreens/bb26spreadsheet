@@ -31,7 +31,11 @@ export function inputTest(
         arr.forEach(test => {
             context("Input Check for " + test.input, () => {
                 it("should return: " + test.result, () => {
-                    expect(fn(test.input)).to.equal(test.result);
+                    expect(() =>
+                        Array.isArray(test.input)
+                            ? fn(...test.input).to.equal(test.result)
+                            : fn(test.input).to.equal(test.result)
+                    );
                 });
             });
         });
@@ -49,11 +53,14 @@ export function invalidInputTest(
 ): () => void {
     return () => {
         arr.forEach(test => {
-            context("With invalid input of " + test.input, () => {
-                it("should throw error: " + test.result, () => {
+            const { input, result, error } = test;
+            context("With invalid input of " + input, () => {
+                it("should throw error: " + result, () => {
                     expect(() => {
-                        fn(test.input);
-                    }).to.throw(test.error, test.result);
+                        input.constructor === Array
+                            ? fn(...input).to.equal(result)
+                            : fn(input).to.equal(result);
+                    }).to.throw(error, result);
                 });
             });
         });
