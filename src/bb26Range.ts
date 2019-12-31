@@ -1,1 +1,3 @@
-export default function bb26Range() {}
+export default function bb26Range() {
+    return "void";
+}

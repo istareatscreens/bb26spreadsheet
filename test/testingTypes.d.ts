@@ -11,8 +11,5 @@ export interface testObjectsType {
     decimalTobb26InvalidInputTest: testObject[];
     bb26RangeInputTest: testObject[];
     bb26RangeInvalidInputTest: testObject[];
-    bb26DecrementInputTest: testObject[];
-    bb26DecrementInvalidInputTest: testObject[];
     bb26IncrementInputTest: testObject[];
-    bb26IncrementInvalidInputTest: testObject[];
 }

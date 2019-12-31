@@ -18,11 +18,24 @@ import {
     decimalTobb26InvalidInputTest,
     bb26RangeInputTest,
     bb26RangeInvalidInputTest,
-    bb26DecrementInputTest,
-    bb26DecrementInvalidInputTest,
-    bb26IncrementInputTest,
-    bb26IncrementInvalidInputTest
+    bb26IncrementInputTest
 } from "./testObjects";
+
+//callback function to swap result with input in testObjects
+const swapFunction = (test: testObject): testObject => {
+    const temp = test.input;
+    return { input: test.result, result: temp };
+};
+
+//setup decimalTobb26 input testing objects
+const decimalTobb26InputTest = bb26toDecimalInputTest.map(test =>
+    swapFunction(test)
+);
+
+//setup bb26Decrement Tests
+const bb26DecrementInputTest = bb26IncrementInputTest.map(test =>
+    swapFunction(test)
+);
 
 //bb26ToDecimal Tests
 describeWraper(
@@ -30,12 +43,6 @@ describeWraper(
     inputTest(bb26toDecimalInputTest, bb26ToDecimal),
     invalidInputTest(bb26toDecimalInvalidInputTest, bb26ToDecimal)
 );
-
-//setup decimalTobb26 input testing objects
-const decimalTobb26InputTest = bb26toDecimalInputTest.map(test => {
-    const temp = test.input;
-    return { input: test.result, result: temp };
-});
 
 //decimalTobb26 Tests
 describeWraper(
@@ -55,12 +62,12 @@ describeWraper(
 describeWraper(
     "bb26Increment",
     inputTest(bb26IncrementInputTest, bb26Increment),
-    invalidInputTest(bb26IncrementInvalidInputTest, bb26Increment)
+    invalidInputTest(bb26toDecimalInvalidInputTest, bb26Increment)
 );
 
 //bb26bb26Decrement Tests
 describeWraper(
     "bb26bb26Decrement",
     inputTest(bb26DecrementInputTest, bb26Decrement),
-    invalidInputTest(bb26DecrementInvalidInputTest, bb26Decrement)
+    invalidInputTest(bb26toDecimalInvalidInputTest, bb26Decrement)
 );

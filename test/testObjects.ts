@@ -171,10 +171,28 @@ const testObjects: testObjectsType = {
             error: TypeError
         }
     ],
-    bb26DecrementInputTest: [],
-    bb26DecrementInvalidInputTest: [],
-    bb26IncrementInputTest: [],
-    bb26IncrementInvalidInputTest: []
+    bb26IncrementInputTest: [
+        {
+            input: "C",
+            result: "B"
+        },
+        {
+            input: "Z",
+            result: "AA"
+        },
+        {
+            input: "ZB",
+            result: "ZC"
+        },
+        {
+            input: "ABC",
+            result: "ABD"
+        },
+        {
+            input: "ABCD",
+            result: "ABCE"
+        }
+    ]
 };
 
 export const {
@@ -183,8 +201,5 @@ export const {
     decimalTobb26InvalidInputTest,
     bb26RangeInputTest,
     bb26RangeInvalidInputTest,
-    bb26DecrementInputTest,
-    bb26DecrementInvalidInputTest,
-    bb26IncrementInputTest,
-    bb26IncrementInvalidInputTest
+    bb26IncrementInputTest
 } = testObjects;
