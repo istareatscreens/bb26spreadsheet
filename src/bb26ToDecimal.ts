@@ -13,7 +13,7 @@ export default function bb26ToDecimal(input: string): number {
 /**
  * performs recursive operation
  *@param {string} input string containing only upper case letters
- *@param {number} iterative recursion summation variable default 0
+ *@param {number} sum recursion summation variable default 0
  *@returns {number} returns decimal number conversion of bijective base-26 input
  */
 function rbb26ToDecimal(input: string, sum: number = 0): number {
