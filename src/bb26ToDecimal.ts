@@ -5,9 +5,9 @@
  *@example bb26ToDecimal("AZ"); // output: 52
  */
 export default function bb26ToDecimal(input: string): number {
-    if (!/^[A-Z]+$/.test(input))
-        throw new TypeError("Input string may only contain upper case letters");
-    return rbb26ToDecimal(input);
+  if (!/^[A-Z]+$/.test(input))
+    throw new TypeError("Input string may only contain upper case letters");
+  return rbb26ToDecimal(input);
 }
 
 /**
@@ -17,12 +17,11 @@ export default function bb26ToDecimal(input: string): number {
  *@returns {number} returns decimal number conversion of bijective base-26 input
  */
 function rbb26ToDecimal(input: string, sum: number = 0): number {
-    return input.length > 0
-        ? rbb26ToDecimal(
-              input.substr(1),
-              sum +
-                  (input.charAt(0).charCodeAt(0) - 64) *
-                      Math.pow(26, input.length - 1)
-          )
-        : sum;
+  return input.length > 0
+    ? rbb26ToDecimal(
+        input.substr(1),
+        sum +
+          (input.charAt(0).charCodeAt(0) - 64) * Math.pow(26, input.length - 1)
+      )
+    : sum;
 }
