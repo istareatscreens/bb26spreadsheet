@@ -14,7 +14,7 @@ export default function decimalTobb26(input: number): string {
 /**
  * performs recursive operation
  *@param {number} input natural number greater than 0
- *@param {string} sum recursion summation variable default empty string
+ *@param {string} sum summation variable default empty string
  *@returns {number} returns upper case letter string bijective base-26 value
  */
 function rdecimalTobb26(input: number, sum: string = ""): string {

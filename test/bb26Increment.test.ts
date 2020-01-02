@@ -18,11 +18,11 @@ describe("#bb26Increment", function() {
 
   //invalid input test
   bb26IncrementInvalidInputTest.forEach(({ input, result, error }) =>
-    context("with invalid inputs", function() {
+    context("with invalid input " + input, function() {
       it("Should throw error " + error, function() {
         expect(function() {
           bb26Increment(input);
-        }).to.throw(error, result);
+        }).to.throw(error!, result);
       });
     })
   );

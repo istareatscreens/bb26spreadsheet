@@ -18,11 +18,11 @@ describe("#bb26ToDecimal", function() {
 
   //invalid input test
   bb26toDecimalInvalidInputTest.forEach(({ input, result, error }) =>
-    context("with invalid inputs", function() {
+    context("with invalid inputs " + input, function() {
       it("Should throw error " + error, function() {
         expect(function() {
           bb26ToDecimal(input);
-        }).to.throw(error, result);
+        }).to.throw(error!, result);
       });
     })
   );

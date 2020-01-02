@@ -13,7 +13,7 @@ const decimalTobb26EM = "Input number may only contain natural numbers values";
 const bb26RangeEM = "Input strings may only contain upper case letters";
 
 //setup bb26toDecimal testing objects
-export const bb26toDecimalInputTest = [
+export const bb26toDecimalInputTest: testObject[] = [
   {
     input: "C",
     result: 3
@@ -55,7 +55,7 @@ export const bb26toDecimalInputTest = [
     result: 915305
   }
 ];
-export const bb26toDecimalInvalidInputTest = [
+export const bb26toDecimalInvalidInputTest: testObject[] = [
   {
     input: "123",
     result: bb26toDecimalEM,
@@ -79,10 +79,10 @@ export const bb26toDecimalInvalidInputTest = [
 ];
 
 //setup decimalTobb26 testing objects
-export const decimalTobb26InputTest = bb26toDecimalInputTest.map(test =>
-  swapFunction(test)
+export const decimalTobb26InputTest: testObject[] = bb26toDecimalInputTest.map(
+  test => swapFunction(test)
 );
-export const decimalTobb26InvalidInputTest = [
+export const decimalTobb26InvalidInputTest: testObject[] = [
   {
     input: Infinity,
     result: decimalTobb26EM,
@@ -111,9 +111,13 @@ export const decimalTobb26InvalidInputTest = [
 ];
 
 //setup bb26Range testing objects
-export const bb26RangeInputTest = [
+export const bb26RangeInputTest: testObject[] = [
   {
     input: { a: "A", b: "" },
+    result: ["A"]
+  },
+  {
+    input: { a: "A", b: "A" },
     result: ["A"]
   },
   {
@@ -160,7 +164,7 @@ export const bb26RangeInvalidInputTest = [
     error: TypeError
   },
   {
-    input: { a: "AbC", b: "" },
+    input: { a: "", b: "AbC" },
     result: bb26RangeEM,
     error: TypeError
   },
@@ -187,14 +191,22 @@ export const bb26RangeInvalidInputTest = [
 ];
 
 //setup bb26Increment testing objects
-export const bb26IncrementInputTest = [
+export const bb26IncrementInputTest: testObject[] = [
   {
     input: "C",
-    result: "B"
+    result: "D"
+  },
+  {
+    input: "AZ",
+    result: "BA"
   },
   {
     input: "Z",
     result: "AA"
+  },
+  {
+    input: "ZZ",
+    result: "AAA"
   },
   {
     input: "ZB",
@@ -209,10 +221,11 @@ export const bb26IncrementInputTest = [
     result: "ABCE"
   }
 ];
-export const bb26IncrementInvalidInputTest = bb26toDecimalInvalidInputTest;
+export const bb26IncrementInvalidInputTest: testObject[] = bb26toDecimalInvalidInputTest;
 
 //setup bb26Decrement testing objects
-export const bb26DecrementInputTest = bb26IncrementInputTest.map(test =>
-  swapFunction(test)
-);
-export const bb26DecrementInvalidInputTest = bb26toDecimalInvalidInputTest;
+export const bb26DecrementInputTest: testObject[] = bb26IncrementInputTest
+  .map(test => swapFunction(test))
+  .map(a => ({ ...a }));
+bb26DecrementInputTest.push({ input: "A", result: "A" });
+export const bb26DecrementInvalidInputTest: testObject[] = bb26toDecimalInvalidInputTest;
