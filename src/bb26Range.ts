@@ -3,7 +3,7 @@ import bb26Increment from "./bb26Increment";
 
 export default function bb26Range(a: string, b: string = ""): string[] {
   if (!/^[A-Z]+$/.test(a) || (!/^[A-Z]+$/.test(b) && b !== ""))
-    throw new TypeError("Input string may only contain upper case letters");
+    throw new TypeError("Input strings may only contain upper case letters");
   if (a == b || (a === "A" && b === "")) return [a];
   let stringArr = ["A"];
   let U = a;
