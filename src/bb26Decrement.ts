@@ -1,3 +1,10 @@
+/**
+ * Decreases a bijective base-26 number by 1
+ * @param input {string} string containing only uppercase letters
+ * @returns {string} Bijective base-26 input - 1
+ * @Example bb26Decrement("B") //"A"
+ * @Example bb26Decrement("AA") //"Z"
+ */
 export default function bb26Decrement(input: string): string {
   if (!/^[A-Z]+$/.test(input))
     throw new TypeError("Input string may only contain upper case letters");

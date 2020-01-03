@@ -1,7 +1,7 @@
 /**
  * Converts decimal numbers starting at 1 to bijective base-26 uppercase letter strings
  * @param {number} input natural number
- * @returns {string} bijective base-26 upper case letter string
+ * @returns {string} Bijective base-26 upper case letter string conversion of input number
  * @example decimalTobb26(1) //A
  * @example decimalTobb26(497) //SC
  */

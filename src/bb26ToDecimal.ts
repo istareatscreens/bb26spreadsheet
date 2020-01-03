@@ -1,7 +1,7 @@
 /**
- *converts string containing only upper case letters to its equivalent decimal number using recursion
+ *Converts string containing only upper case letters (bijective base-26 form) to its equivalent decimal number
  *@param {string} input string containing only upper case letters
- *@returns {number} returns decimal number conversion of bijective base-26 upper case letter input
+ *@returns {number} Decimal number conversion of bijective base-26 upper case letter input
  *@example bb26ToDecimal("AZ"); // output: 52
  */
 export default function bb26ToDecimal(input: string): number {
