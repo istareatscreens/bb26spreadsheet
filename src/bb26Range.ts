@@ -5,8 +5,8 @@ export default function bb26Range(a: string, b: string = ""): string[] {
   if (!/^[A-Z]+$/.test(a) || (!/^[A-Z]+$/.test(b) && b !== ""))
     throw new TypeError("Input strings may only contain upper case letters");
   if (a == b || (a === "A" && b === "")) return [a];
-  let stringArr = ["A"];
-  let U = a;
+  let stringArr: string[] = ["A"];
+  let U: string = a;
   if (b !== "") {
     if (bb26ToDecimal(a) > bb26ToDecimal(b)) {
       stringArr[0] = b;

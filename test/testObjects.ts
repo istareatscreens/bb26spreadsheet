@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import { testObject } from "./testingTypes";
-
 //callback function to swap result with input in testObjects
 const swapFunction = (test: testObject): testObject => {
   const temp = { ...test };
