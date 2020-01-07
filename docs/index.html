@@ -8,28 +8,13 @@
   </head>
   <body>
     <div class="page">
-      <div class="sidebar-container">
-        <div class="menu-container">
-          <h1 class="menu-title">bb26-spreadsheet Documentation</h1>
-          <div class="menu-section">
-            <h2 class="menu-heading">API</h2>
-            <ul class="menu-list">
-              <li class="menu-item">bb26Decrement</li>
-              <li class="menu-item">bb26Increment</li>
-              <li class="menu-item">bb26Range</li>
-              <li class="menu-item">bb26ToDecimal</li>
-              <li class="menu-item">decimalTobb26</li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <div class="content-container">
-        <div class="card">
-          <div class="card-content" id="bb26Decrement">
-            <h2 class="card-title">bb26Increment</h2>
+        <div class="card" id="bb26Increment">
+          <div class="card-content">
+            <h2 class="card-title">bb26Increment(input: string): string</h2>
             <p class="code-description">
               The bb26Increment function returns a string representing the plus
-              one increment of a bijective base-26 number input string.
+              one increment of a bijective base-26 number input string
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
@@ -39,43 +24,96 @@ let bb26PlusOne = bb26Increment("AA");
 console.log(bb26PlusOne);
 //returns "AB"
               </pre>
-              <div class="function-code"></div>
-              <div class="solution-code"></div>
             </div>
           </div>
         </div>
-        <!--<div class="content-card" id="bb26Increment">
-          <h2 class="title">bb26Increment</h2>
-          <div class="code-container">
-            <div class="function-code"></div>
-            <div class="solution-code"></div>
+        <div class="card" id="bb26Decrement">
+          <div class="card-content">
+            <h2 class="card-title">bb26Decrement(input: string): string</h2>
+            <p class="code-description">
+              The bb26Decrement function returns a string representing the minus
+              one decrement of a bijective base-26 number input string
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import bb26Decrement from 'bb26-spreadsheet';
+
+let bb26MinusOne = bb26Decrement("AAZ");
+console.log(bb26MinusOne);
+//returns "AAX"
+              </pre>
+            </div>
           </div>
-          <p class="code-description"></p>
         </div>
-        <div class="content-card" id="bb26Range">
-          <h2 class="title">bb26Range</h2>
-          <div class="code-container">
-            <div class="function-code"></div>
-            <div class="solution-code"></div>
+        <div class="card" id="bb26Range">
+          <div class="card-content">
+            <h2 class="card-title">
+              bb26Range(a: string, b: string): string[]
+            </h2>
+            <p class="code-description">
+              The bb26Range function returns an inclusive increasing order array
+              of upper case letter bijective base-26 number strings representing
+              the range from ["A" to A] with one input or [A to B] with two
+              inputs. Where A and B are upper case letter strings function
+              inputs
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import bb26Range from 'bb26-spreadsheet';
+
+let bb26RangeTwoInputs = bb26Range("E","G");
+let bb26RangeOneInput = bb26Range("F");
+
+console.log(bb26RangeTwoInputs);
+//returns ["E", "F", "G"]
+console.log(bb26RangeTwoInputs);
+//returns ["A", "B", "C","E","F"]
+              </pre>
+            </div>
           </div>
-          <p class="code-description"></p>
         </div>
-        <div class="content-card" id="bb26ToDecimal">
-          <h2 class="title">bb26ToDecimal</h2>
-          <div class="code-container">
-            <div class="function-code"></div>
-            <div class="solution-code"></div>
+        <div class="card" id="bb26ToDecimal">
+          <div class="card-content">
+            <h2 class="card-title">
+              bb26ToDecimal(input: string): number
+            </h2>
+            <p class="code-description">
+              The bb26ToDecimal function returns a decimal number equivalent to
+              the bijective base-26 number upper case letter string input
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import bb26ToDecimal from 'bb26-spreadsheet';
+
+let bb26ToDecimalResult = bb26ToDecimal("Z");
+
+console.log(bb26ToDecimalResult);
+//returns 26 
+              </pre>
+            </div>
           </div>
-          <p class="code-description"></p>
         </div>
-        <div class="content-card" id="decimalTobb26">
-          <h2 class="title">decimalTobb26</h2>
-          <div class="code-container">
-            <div class="function-code"></div>
-            <div class="solution-code"></div>
+        <div class="card" id="decimalTobb26">
+          <div class="card-content">
+            <h2 class="card-title">
+              decimalTobb26(input: number): string
+            </h2>
+            <p class="code-description">
+              The decimalTobb26 function returns a bijective base-26 number
+              upper case letter string equivalent to the decimal number input
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import decimalTobb26 from 'bb26-spreadsheet';
+
+let decimalTobb26Result = decimalTobb26("497");
+
+console.log(decimalTobb26Result);
+//returns "SC" 
+              </pre>
+            </div>
           </div>
-          <p class="code-description"></p>
-        </div>-->
+        </div>
       </div>
     </div>
   </body>
