@@ -5,9 +5,46 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=javascript&amp;skin=sunburst"></script>
     <title>bb26-spreadsheet API Documentation</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-500px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
   </head>
   <body>
     <div class="page">
+      <!--NavBar-->
+      <div id="navbar">
+        <p class="nav-title">bb26-spreadsheet</p>
+        <div class="nav-menu">
+          <a href="#bb26Increment">bb26Increment</a>
+          <a href="#bb26Decrement">bb26Decrement</a>
+          <a href="#bb26Range">bb26Range</a>
+          <a href="#bb26ToDecimal">bb26ToDecimal</a>
+          <a href="#decimalTobb26">decimalTobb26</a>
+        </div>
+      </div>
+
+      <!--Content section-->
       <div class="content-container">
         <div class="card" id="bb26Increment">
           <div class="card-content">
@@ -54,8 +91,7 @@ console.log(bb26MinusOne);
               The bb26Range function returns an inclusive increasing order array
               of upper case letter bijective base-26 number strings representing
               the range from ["A" to A] with one input or [A to B] with two
-              inputs. Where A and B are upper case letter strings function
-              inputs
+              inputs. Where A and B are upper case letter string function inputs
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
@@ -64,7 +100,7 @@ import bb26Range from 'bb26-spreadsheet';
 let bb26RangeTwoInputs = bb26Range("E","G");
 let bb26RangeOneInput = bb26Range("F");
 
-console.log(bb26RangeTwoInputs);
+console.log(bb26RangeOneInput);
 //returns ["E", "F", "G"]
 console.log(bb26RangeTwoInputs);
 //returns ["A", "B", "C","E","F"]
@@ -106,7 +142,7 @@ console.log(bb26ToDecimalResult);
               <pre class="prettyprint code-block">
 import decimalTobb26 from 'bb26-spreadsheet';
 
-let decimalTobb26Result = decimalTobb26("497");
+let decimalTobb26Result = decimalTobb26(497);
 
 console.log(decimalTobb26Result);
 //returns "SC" 
