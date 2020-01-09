@@ -1,31 +1,41 @@
 {
   "name": "bb26-spreadsheet",
-  "version": "1.0.0",
-  "description": "Bijective base 26 number system represented using letters A-Z handling utilities for microsoft excel and general purpose",
+  "version": "1.0.5",
+  "description": "Bijective base-26 number system utilities for spreadsheet software",
   "main": "lib/index.js",
-  "git repository": "https://github.com/istareatscreens/bb26-spreadsheet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/istareatscreens/bb26-spreadsheet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/istareatscreens/bb26-spreadsheet/issues"
+  },
   "types": "lib",
   "keywords": [
     "bb26",
-    "base26",
+    "base-26",
     "spreadsheet",
     "excel",
-    "bijectivebase26"
+    "bijective base-26",
+    "Hexavigesimal"
   ],
   "scripts": {
     "build": "tsc -p .",
-    "test": "mocha -r  ts-node/register test/*.test.ts"
+    "lint": "eslint src/*.ts",
+    "test": "mocha -r  ts-node/register test/*.test.ts",
+    "test:coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "author": "Stephen Charbonneau",
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
-    "@typescript-eslint/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/parser": "^2.13.0",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "mocha": "^6.2.2",
+    "mocha-lcov-reporter": "^1.3.0",
     "prettier": "^1.19.1",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
