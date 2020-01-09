@@ -25,9 +25,9 @@ export default function bb26Range(a: string, b: string = ""): string[] {
     }
   }
   //execution
-  while (stringArr.length < 100000000) {
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
     stringArr.push(bb26Increment(stringArr[stringArr.length - 1]));
     if (stringArr[stringArr.length - 1] === U) return stringArr;
   }
-  throw new Error("Function could not complete");
 }
