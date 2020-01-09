@@ -1,11 +1,19 @@
 {
   "name": "bb26-spreadsheet",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "description": "Bijective base 26 number system represented using letters A-Z handling utilities for microsoft excel and general purpose",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "git repository": "https://github.com/istareatscreens/bb26-spreadsheet",
+  "types": "lib",
+  "keywords": [
+    "bb26",
+    "base26",
+    "spreadsheet",
+    "excel",
+    "bijectivebase26"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p .",
     "test": "mocha -r  ts-node/register test/*.test.ts"
   },
   "author": "Stephen Charbonneau",

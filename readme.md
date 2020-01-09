@@ -4,10 +4,10 @@ JavaScript utilities for [Bijective Base-26](https://en.wikipedia.org/wiki/Bijec
 
 Differs from the npm package bb26 by having an inclusive range function and no dependencies
 
-## Api Documentation
+## Usage
 
-[Found here](https://istareatscreens.github.io/bb26-spreadsheet/)
+[API documentation](https://istareatscreens.github.io/bb26-spreadsheet/)
 
 ## Installation
 
-To be implemented
+`npm i bb26-spreadsheet`
