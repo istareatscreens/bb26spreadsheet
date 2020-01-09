@@ -9,5 +9,9 @@ script:
   - npm run lint
   - npm run test:coveralls
 
+branches:
+  only:
+    - master
+
 notifications:
   email: false
