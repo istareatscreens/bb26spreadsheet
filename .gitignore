@@ -10,3 +10,5 @@ performance
 report*
 coverage
 .nyc_output
+nyc
+*.lcov

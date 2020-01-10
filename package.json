@@ -23,7 +23,7 @@
     "build": "tsc -p .",
     "lint": "eslint src/*.ts",
     "test": "nyc --reporter=html --reporter=text mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "nyc": {
     "include": [
@@ -49,7 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.9",
+    "codecov": "^3.6.1",
     "eslint": "^6.8.0",
     "istanbul": "^0.4.5",
     "mocha": "^6.2.2",
