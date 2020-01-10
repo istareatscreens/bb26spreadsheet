@@ -41,6 +41,7 @@
     ],
     "all": true
   },
+  "sideEffects": false,
   "author": "Stephen Charbonneau",
   "license": "MIT",
   "devDependencies": {
