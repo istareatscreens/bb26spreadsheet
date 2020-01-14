@@ -112,6 +112,10 @@ export const decimalTobb26InvalidInputTest: testObject[] = [
 //setup bb26Range testing objects
 export const bb26RangeInputTest: testObject[] = [
   {
+    input: { a: "C" },
+    result: ["A", "B", "C"]
+  },
+  {
     input: { a: "A", b: "" },
     result: ["A"]
   },
