@@ -1,3 +1,4 @@
+import { checkIfValidbb26 as check } from "./helperFunctions";
 /**
  * Increases a bijective base-26 number by 1
  * @param input {string} string containing only uppercase letters
@@ -6,8 +7,7 @@
  * @Example bb26Decrement("Z") //"AA"
  */
 export default function bb26Increment(input: string): string {
-  if (!/^[A-Z]+$/.test(input))
-    throw new TypeError("Input string may only contain upper case letters");
+  check(input);
   let temp: string = "";
   for (let i = input.length - 1; i > -1; i--) {
     if (input[i] !== "Z") {

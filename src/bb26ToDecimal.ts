@@ -1,3 +1,4 @@
+import { checkIfValidbb26 as check } from "./helperFunctions";
 /**
  *Converts string containing only upper case letters (bijective base-26 form) to its equivalent decimal number
  *@param {string} input string containing only upper case letters
@@ -5,8 +6,7 @@
  *@example bb26ToDecimal("AZ"); // output: 52
  */
 export default function bb26ToDecimal(input: string): number {
-  if (!/^[A-Z]+$/.test(input))
-    throw new TypeError("Input string may only contain upper case letters");
+  check(input);
   return rbb26ToDecimal(input);
 }
 

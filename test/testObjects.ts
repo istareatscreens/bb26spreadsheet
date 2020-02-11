@@ -226,6 +226,81 @@ export const bb26IncrementInputTest: testObject[] = [
 ];
 export const bb26IncrementInvalidInputTest: testObject[] = bb26toDecimalInvalidInputTest;
 
+//setup bb26Compare testing objects
+export const bb26GTLTInputTest: testObject[] = [
+  {
+    input: { a: "CC", b: "CC" },
+    result: false
+  },
+  {
+    input: { a: "A", b: "C" },
+    result: false
+  },
+  {
+    input: { a: "A", b: "A" },
+    result: false
+  },
+  {
+    input: { a: "C", b: "A" },
+    result: true
+  },
+  {
+    input: { a: "CC", b: "A" },
+    result: true
+  },
+  {
+    input: { a: "A", b: "BA" },
+    result: false
+  },
+  {
+    input: { a: "BB", b: "AA" },
+    result: true
+  },
+  {
+    input: { a: "BBB", b: "EEE" },
+    result: false
+  }
+];
+
+export const bb26EqInputTest: testObject[] = [
+  {
+    input: { a: "CC", b: "CC" },
+    result: true
+  },
+  {
+    input: { a: "A", b: "C" },
+    result: false
+  },
+  {
+    input: { a: "A", b: "A" },
+    result: true
+  },
+  {
+    input: { a: "C", b: "A" },
+    result: false
+  },
+  {
+    input: { a: "CC", b: "A" },
+    result: false
+  },
+  {
+    input: { a: "A", b: "BA" },
+    result: false
+  },
+  {
+    input: { a: "BB", b: "AA" },
+    result: false
+  },
+  {
+    input: { a: "BBB", b: "EEE" },
+    result: false
+  },
+  {
+    input: { a: "EEE", b: "EEE" },
+    result: true
+  }
+];
+
 //setup bb26Decrement testing objects
 export const bb26DecrementInputTest: testObject[] = bb26IncrementInputTest
   .map(test => swapFunction(test))
