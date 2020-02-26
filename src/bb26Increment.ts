@@ -6,8 +6,12 @@ import { checkIfValidbb26 as check } from "./helperFunctions";
  * @Example bb26Decrement("A") //"B"
  * @Example bb26Decrement("Z") //"AA"
  */
-export default function bb26Increment(input: string): string {
+export function bb26Increment(input: string): string {
   check(input);
+  return bb26IncrementNoCheck(input);
+}
+
+export function bb26IncrementNoCheck(input: string): string {
   let temp: string = "";
   for (let i = input.length - 1; i > -1; i--) {
     if (input[i] !== "Z") {

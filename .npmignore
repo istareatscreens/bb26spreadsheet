@@ -11,6 +11,7 @@ docs
 .vscode
 coverage.lcov
 .gitignore
+tsconfig.json
 
 #Testing Reports
 report*

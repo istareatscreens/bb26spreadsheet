@@ -1,5 +1,5 @@
 import { bb26Compare } from "./helperFunctions";
-import bb26Increment from "./bb26Increment";
+import { bb26IncrementNoCheck as bb26Increment } from "./bb26Increment";
 /**
  * Returns a range from given inputs in increasing bijective base-26 order
  * @param {string} a string containing only uppercase letters

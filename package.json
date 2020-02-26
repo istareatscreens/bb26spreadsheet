@@ -1,6 +1,6 @@
 {
   "name": "bb26-spreadsheet",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "Bijective base-26 number system utilities for spreadsheet software",
   "main": "lib/index.js",
   "repository": {
@@ -11,6 +11,9 @@
     "url": "https://github.com/istareatscreens/bb26-spreadsheet/issues"
   },
   "types": "lib",
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "bb26",
     "base-26",

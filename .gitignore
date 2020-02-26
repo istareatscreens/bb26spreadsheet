@@ -2,6 +2,7 @@
 node_modules
 #Ignore compiled JavaScript folder
 lib
+*.tgz
 #Ignore text files (used for notes)
 *.txt
 #Ignore performance testing file
