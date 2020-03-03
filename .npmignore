@@ -7,6 +7,10 @@ node_modules
 #documentation
 docs
 
+#Bot Files
+codecov.yml
+renovate.json
+
 #IDE config files 
 .vscode
 coverage.lcov

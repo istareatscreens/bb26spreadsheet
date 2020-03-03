@@ -301,6 +301,45 @@ export const bb26EqInputTest: testObject[] = [
   }
 ];
 
+export const bb26CompareInputTest: testObject[] = [
+  {
+    input: { a: "CC", b: "CC" },
+    result: 0
+  },
+  {
+    input: { a: "A", b: "C" },
+    result: 2
+  },
+  {
+    input: { a: "A", b: "A" },
+    result: 0
+  },
+  {
+    input: { a: "C", b: "A" },
+    result: 1
+  },
+  {
+    input: { a: "CC", b: "A" },
+    result: 1
+  },
+  {
+    input: { a: "A", b: "BA" },
+    result: 2
+  },
+  {
+    input: { a: "BB", b: "AA" },
+    result: 1
+  },
+  {
+    input: { a: "BBB", b: "EEE" },
+    result: 2
+  },
+  {
+    input: { a: "EEE", b: "EEE" },
+    result: 0
+  }
+];
+
 //setup bb26Decrement testing objects
 export const bb26DecrementInputTest: testObject[] = bb26IncrementInputTest
   .map(test => swapFunction(test))

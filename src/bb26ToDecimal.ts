@@ -1,4 +1,4 @@
-import { checkIfValidbb26 as check } from "./helperFunctions";
+import { checkIfValidbb26 as check } from "./bb26Check";
 /**
  *Converts string containing only upper case letters (bijective base-26 form) to its equivalent decimal number
  *@param {string} input string containing only upper case letters

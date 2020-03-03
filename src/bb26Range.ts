@@ -1,4 +1,4 @@
-import { bb26Compare } from "./helperFunctions";
+import { bb26Compare } from "./bb26Compare";
 import { bb26IncrementNoCheck as bb26Increment } from "./bb26Increment";
 /**
  * Returns a range from given inputs in increasing bijective base-26 order

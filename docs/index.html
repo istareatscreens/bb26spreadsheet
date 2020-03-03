@@ -41,6 +41,7 @@
           <a href="#bb26Range">bb26Range</a>
           <a href="#bb26ToDecimal">bb26ToDecimal</a>
           <a href="#decimalTobb26">decimalTobb26</a>
+          <a href="#bb26Compare">bb26Compare</a>
         </div>
       </div>
 
@@ -146,6 +147,36 @@ let decimalTobb26Result = decimalTobb26(497);
 
 console.log(decimalTobb26Result);
 //returns "SC" 
+              </pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="bb26Compare">
+          <div class="card-content">
+            <h2 class="card-title">
+              bb26Compare(a: string, b: string): number
+            </h2>
+            <p class="code-description">
+              The bb26Compare function takes in two bijective base-26 numbers
+              and returns the number: </br> 0 if a === b, 1 if a > b, and 2 if a < b
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import bb26Compare from 'bb26-spreadsheet';
+
+switch(bb26Compare("A", "B")){
+  case 0:
+    console.log("A==B");
+    break;
+  case 1:
+    console.log("A>B");
+    break;
+  case 2:
+    console.log("A&#60;B");
+    break; 
+  }
+//returns "A>B"
               </pre>
             </div>
           </div>

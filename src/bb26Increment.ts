@@ -1,4 +1,4 @@
-import { checkIfValidbb26 as check } from "./helperFunctions";
+import { checkIfValidbb26 as check } from "./bb26Check";
 /**
  * Increases a bijective base-26 number by 1
  * @param input {string} string containing only uppercase letters
