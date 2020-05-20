@@ -1,3 +1,5 @@
+import decimalCheck from "./decimalCheck";
+
 /**
  * Converts decimal numbers starting at 1 to bijective base-26 uppercase letter strings
  * @param {number} input natural number
@@ -6,8 +8,7 @@
  * @example decimalTobb26(497) //SC
  */
 export default function decimalTobb26(input: number): string {
-  if (!/^(0|([1-9]\d*))$/.test(input.toString()) || input === 0)
-    throw new TypeError("Input number may only contain natural numbers values");
+  decimalCheck(input);
   return rdecimalTobb26(input);
 }
 
@@ -17,7 +18,7 @@ export default function decimalTobb26(input: number): string {
  *@param {string} sum summation variable default empty string
  *@returns {number} returns upper case letter string bijective base-26 value
  */
-function rdecimalTobb26(input: number, sum: string = ""): string {
+export function rdecimalTobb26(input: number, sum: string = ""): string {
   return input !== 0
     ? rdecimalTobb26(
         Math.floor((input - 1) / 26),

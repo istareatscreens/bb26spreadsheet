@@ -16,7 +16,7 @@ export default function bb26ToDecimal(input: string): number {
  *@param {number} sum summation variable default 0
  *@returns {number} returns decimal number conversion of bijective base-26 input
  */
-function rbb26ToDecimal(input: string, sum: number = 0): number {
+export function rbb26ToDecimal(input: string, sum: number = 0): number {
   return input.length > 0
     ? rbb26ToDecimal(
         input.substr(1),
