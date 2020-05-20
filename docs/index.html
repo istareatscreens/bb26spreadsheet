@@ -36,12 +36,14 @@
       <div id="navbar">
         <p class="nav-title">bb26-spreadsheet</p>
         <div class="nav-menu">
-          <a href="#bb26Increment">bb26Increment</a>
+          <a class= "nav-start" href="#bb26Increment">bb26Increment</a>
           <a href="#bb26Decrement">bb26Decrement</a>
           <a href="#bb26Range">bb26Range</a>
           <a href="#bb26ToDecimal">bb26ToDecimal</a>
           <a href="#decimalTobb26">decimalTobb26</a>
           <a href="#bb26Compare">bb26Compare</a>
+          <a href="#bb26Random">bb26Random</a>
+          <a class="nav-end"href="#numberbb26Random">numberbb26Random</a>
         </div>
       </div>
 
@@ -56,7 +58,7 @@
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
-import bb26Increment from 'bb26-spreadsheet';
+import { bb26Increment } from 'bb26-spreadsheet';
 
 let bb26PlusOne = bb26Increment("AA");
 console.log(bb26PlusOne);
@@ -74,7 +76,7 @@ console.log(bb26PlusOne);
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
-import bb26Decrement from 'bb26-spreadsheet';
+import { bb26Decrement } from 'bb26-spreadsheet';
 
 let bb26MinusOne = bb26Decrement("AAZ");
 console.log(bb26MinusOne);
@@ -86,7 +88,7 @@ console.log(bb26MinusOne);
         <div class="card" id="bb26Range">
           <div class="card-content">
             <h2 class="card-title">
-              bb26Range(a: string, b: string): string[]
+              bb26Range(a: string, b: string = "A"): string[]
             </h2>
             <p class="code-description">
               The bb26Range function returns an inclusive increasing order array
@@ -96,7 +98,7 @@ console.log(bb26MinusOne);
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
-import bb26Range from 'bb26-spreadsheet';
+import { bb26Range } from 'bb26-spreadsheet';
 
 let bb26RangeTwoInputs = bb26Range("E","G");
 let bb26RangeOneInput = bb26Range("F");
@@ -120,7 +122,7 @@ console.log(bb26RangeTwoInputs);
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
-import bb26ToDecimal from 'bb26-spreadsheet';
+import { bb26ToDecimal } from 'bb26-spreadsheet';
 
 let bb26ToDecimalResult = bb26ToDecimal("Z");
 
@@ -141,7 +143,7 @@ console.log(bb26ToDecimalResult);
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
-import decimalTobb26 from 'bb26-spreadsheet';
+import { decimalTobb26 } from 'bb26-spreadsheet';
 
 let decimalTobb26Result = decimalTobb26(497);
 
@@ -159,11 +161,11 @@ console.log(decimalTobb26Result);
             </h2>
             <p class="code-description">
               The bb26Compare function takes in two bijective base-26 numbers
-              and returns the number: </br> 0 if a === b, 1 if a > b, and 2 if a < b
+              and returns the number:</br> </br> 0 if a === b, 1 if a > b, and 2 if a < b
             </p>
             <div class="code-container">
               <pre class="prettyprint code-block">
-import bb26Compare from 'bb26-spreadsheet';
+import { bb26Compare } from 'bb26-spreadsheet';
 
 switch(bb26Compare("A", "B")){
   case 0:
@@ -181,7 +183,46 @@ switch(bb26Compare("A", "B")){
             </div>
           </div>
         </div>
-      </div>
+        <div class="card" id="bb26Random">
+          <div class="card-content">
+            <h2 class="card-title">
+              bb26Random(a: string, b: string = "A"): string
+            </h2>
+            <p class="code-description">
+              The bb26Random function takes in two bijective base-26 numbers
+              and returns a random base-26 number string inclusively between the two inputs 
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import { bb26Random } from 'bb26-spreadsheet';
+
+console.log(bb26Random("A", "CE"));
+//returns a value inclusively between "A" and "CE" e.g. "AA" 
+              </pre>
+            </div>
+          </div>
     </div>
+        <div class="card" id="numberbb26Random">
+          <div class="card-content">
+            <h2 class="card-title">
+              numberbb26Random(a: number, b: number = 1): string
+            </h2>
+            <p class="code-description">
+The numberbb26Random function takes in one or two integers greater or equal to 1 
+              and returns a random base-26 number string inclusively between 1 and one input or the two inputs
+            </p>
+            <div class="code-container">
+              <pre class="prettyprint code-block">
+import { numberbb26Random as bb26Random } from 'bb26-spreadsheet';
+
+console.log(bb26Random(3, 1000));
+//returns a value inclusively between 3 and 1000 e.g. "ABA" 
+              </pre>
+            </div>
+          </div>
+      </div>
+</div>
+</div>
+</div>
   </body>
 </html>

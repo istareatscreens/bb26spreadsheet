@@ -6,8 +6,8 @@ import { bb26IncrementNoCheck as bb26Increment } from "./bb26Increment";
  * @param {string?} b Optional string containing only uppercase letters
  * @returns {string[]} Increasing order array of strings from [a to b] or ["A" to a]
  * @Example bb26Range("C") //["A", "B", "C"]
- * @Example bb26Range("AZ, BC") //["AZ","BA","BB","BC"]
- * @Example bb26Range("S, Q") //["Q","R","S"]
+ * @Example bb26Range("AZ", "BC") //["AZ","BA","BB","BC"]
+ * @Example bb26Range("S", "Q") //["Q","R","S"]
  */
 export default function bb26Range(a: string, b: string = ""): string[] {
   if (!/^[A-Z]+$/.test(a) || (!/^[A-Z]+$/.test(b) && b !== ""))
