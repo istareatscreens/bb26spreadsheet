@@ -1,8 +1,10 @@
-import { checkIfValidbb26 as check } from "./bb26Check";
+import {checkIfValidbb26 as check} from './isValidbb26';
 /**
- *Converts string containing only upper case letters (bijective base-26 form) to its equivalent decimal number
+ *Converts string containing only upper case letters (bijective base-26 form) to
+ *its equivalent decimal number
  *@param {string} input string containing only upper case letters
- *@returns {number} Decimal number conversion of bijective base-26 upper case letter input
+ *@returns {number} Decimal number conversion of bijective base-26 upper case
+ *    letter input
  *@example bb26ToDecimal("AZ"); // output: 52
  */
 export default function bb26ToDecimal(input: string): number {
@@ -17,11 +19,10 @@ export default function bb26ToDecimal(input: string): number {
  *@returns {number} returns decimal number conversion of bijective base-26 input
  */
 export function rbb26ToDecimal(input: string, sum: number = 0): number {
-  return input.length > 0
-    ? rbb26ToDecimal(
-        input.substr(1),
-        sum +
-          (input.charAt(0).charCodeAt(0) - 64) * Math.pow(26, input.length - 1)
-      )
-    : sum;
+  return input.length > 0 ? rbb26ToDecimal(
+                                input.substr(1),
+                                sum +
+                                    (input.charAt(0).charCodeAt(0) - 64) *
+                                        Math.pow(26, input.length - 1)) :
+                            sum;
 }

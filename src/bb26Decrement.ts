@@ -1,4 +1,4 @@
-import { checkIfValidbb26 as check } from "./bb26Check";
+import {checkIfValidbb26 as check} from './isValidbb26';
 /**
  * Decreases a bijective base-26 number by 1
  * @param input {string} string containing only uppercase letters
@@ -8,15 +8,15 @@ import { checkIfValidbb26 as check } from "./bb26Check";
  */
 export default function bb26Decrement(input: string): string {
   check(input);
-  let temp: string = "";
+  let temp: string = '';
   for (let i = input.length - 1; i > -1; i--) {
-    if (input[i] !== "A") {
+    if (input[i] !== 'A') {
       temp = String.fromCharCode(input.charCodeAt(i) - 1) + temp;
       input = input.slice(0, i) + temp;
       return input;
     } else {
-      temp += "Z";
+      temp += 'Z';
     }
   }
-  return input === "A" ? "A" : temp.slice(0, temp.length - 1);
+  return input === 'A' ? 'A' : temp.slice(0, temp.length - 1);
 }

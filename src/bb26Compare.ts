@@ -1,7 +1,8 @@
-import { checkIfValidbb26 as check } from "./bb26Check";
+import {checkIfValidbb26 as check} from './isValidbb26';
 
 /**
- * Returns a boolean value of true  if first bb26 number argument is greater than second
+ * Returns a boolean value of true  if first bb26 number argument is greater
+ * than second
  * @param {string} a string containing only uppercase letters
  * @param {string} b string containing only uppercase letters
  * @return {boolean} true or false
@@ -19,7 +20,8 @@ export function bb26GT(a: string, b: string): boolean {
 }
 
 /**
- * Returns a boolean value of true  if first bb26 number argument is less than second
+ * Returns a boolean value of true  if first bb26 number argument is less than
+ * second
  * @param {string} a string containing only uppercase letters
  * @param {string} b string containing only uppercase letters
  * @return {boolean} true or false
@@ -37,7 +39,8 @@ export function bb26LT(a: string, b: string): boolean {
 }
 
 /**
- * Returns a boolean value of true if first bb26 number argument is equal to the second
+ * Returns a boolean value of true if first bb26 number argument is equal to the
+ * second
  * @param {string} a string containing only uppercase letters
  * @param {string} b string containing only uppercase letters
  * @return {boolean} true or false
@@ -71,9 +74,9 @@ export function bb26Compare(a: string, b: string): number {
   return getbb26Comparison(a, b);
 }
 
-//Returns 1 if a is larger than b
-//Returns 2 if b is larger than a
-//Returns 0 if both are equal
+// Returns 1 if a is larger than b
+// Returns 2 if b is larger than a
+// Returns 0 if both are equal
 export function getbb26Comparison(a: string, b: string): number {
   if (a.length > b.length) {
     return 1;
@@ -85,7 +88,8 @@ export function getbb26Comparison(a: string, b: string): number {
         return 1;
       } else if (b.charCodeAt(i) > a.charCodeAt(i)) {
         return 2;
-      } else;
+      } else
+        ;
     }
   }
   return 0;
