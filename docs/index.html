@@ -43,7 +43,8 @@
           <a href="#decimalTobb26">decimalTobb26</a>
           <a href="#bb26Compare">bb26Compare</a>
           <a href="#bb26Random">bb26Random</a>
-          <a class="nav-end"href="#numberbb26Random">numberbb26Random</a>
+          <a href="#numberbb26Random">numberbb26Random</a>
+          <a href="#isValidbb26">isValidbb26</a>
         </div>
       </div>
 
@@ -221,6 +222,29 @@ console.log(bb26Random(3, 1000));
             </div>
           </div>
       </div>
+      <div class="card" id="isValidbb26">
+        <div class="card-content">
+          <h2 class="card-title">
+            isValidbb26(input: string, surpressError: boolean = false): boolean
+          </h2>
+          <p class="code-description">
+The isValidbb26 function takes in a string and checks to see if it is a valid BB26 type string. If the string
+does not consist of only uppercase numbers the function throws a TypeError error. If the second argument is specified true
+the function does not throw an error but returns true or false values
+          </p>
+          <div class="code-container">
+            <pre class="prettyprint code-block">
+import { isValidbb26 } from 'bb26-spreadsheet';
+
+console.log(isValidbb26("AB")); //returns true
+console.log(isValidbb26("ABb")); //throws throws TypeError
+console.log(isValidbb26("AB", true)); //returns true
+console.log(isValidbb26("ABb", true)); //returns false
+            </pre>
+          </div>
+        </div>
+    </div>
+
 </div>
 </div>
 </div>
