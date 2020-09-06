@@ -21,8 +21,6 @@ export default function bb26ToDecimal(input: string): number {
 export function rbb26ToDecimal(input: string, sum: number = 0): number {
   return input.length > 0 ? rbb26ToDecimal(
                                 input.substr(1),
-                                sum +
-                                    (input.charAt(0).charCodeAt(0) - 64) *
-                                        Math.pow(26, input.length - 1)) :
-                            sum;
+                                sum + (input.charAt(0).charCodeAt(0) - 64) *
+                                        Math.pow(26, input.length - 1)) : sum;
 }

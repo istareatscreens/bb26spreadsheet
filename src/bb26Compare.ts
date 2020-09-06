@@ -12,11 +12,7 @@ import {checkIfValidbb26 as check} from './isValidbb26';
 export function bb26GT(a: string, b: string): boolean {
   check(a);
   check(b);
-  if (getbb26Comparison(a, b) === 1) {
-    return true;
-  } else {
-    return false;
-  }
+  return (getbb26Comparison(a, b) === 1);
 }
 
 /**
@@ -31,11 +27,7 @@ export function bb26GT(a: string, b: string): boolean {
 export function bb26LT(a: string, b: string): boolean {
   check(a);
   check(b);
-  if (getbb26Comparison(a, b) === 2) {
-    return true;
-  } else {
-    return false;
-  }
+  return (getbb26Comparison(a, b) === 2);
 }
 
 /**
@@ -50,11 +42,7 @@ export function bb26LT(a: string, b: string): boolean {
 export function bb26Eq(a: string, b: string): boolean {
   check(a);
   check(b);
-  if (getbb26Comparison(a, b) === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return getbb26Comparison(a, b) === 0;
 }
 
 /**
@@ -88,8 +76,7 @@ export function getbb26Comparison(a: string, b: string): number {
         return 1;
       } else if (b.charCodeAt(i) > a.charCodeAt(i)) {
         return 2;
-      } else
-        ;
+      } else ;
     }
   }
   return 0;
