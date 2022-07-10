@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/istareatscreens/bb26-spreadsheet.svg?branch=master)](https://travis-ci.com/istareatscreens/bb26-spreadsheet)[![codecov](https://codecov.io/gh/istareatscreens/bb26-spreadsheet/branch/master/graph/badge.svg)](https://codecov.io/gh/istareatscreens/bb26-spreadsheet)
+[![Build Status](https://app.travis-ci.com/istareatscreens/bb26-spreadsheet.svg?branch=master)](https://travis-ci.com/istareatscreens/bb26-spreadsheet)[![codecov](https://codecov.io/gh/istareatscreens/bb26-spreadsheet/branch/master/graph/badge.svg)](https://codecov.io/gh/istareatscreens/bb26-spreadsheet)
 
 # Bijective Base-26-spreadsheet
 
