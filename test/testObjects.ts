@@ -1,5 +1,10 @@
-// eslint-disable-next-line no-unused-vars
-import { testObject } from "./testingTypes";
+//stores types used in testing modules
+export interface testObject {
+  input: any;
+  result: any;
+  error?: TypeErrorConstructor | ErrorConstructor;
+}
+
 //callback function to swap result with input in testObjects
 const swapFunction = (test: testObject): testObject => {
   const temp = { ...test };
@@ -224,7 +229,8 @@ export const bb26IncrementInputTest: testObject[] = [
     result: "ABCE",
   },
 ];
-export const bb26IncrementInvalidInputTest: testObject[] = bb26toDecimalInvalidInputTest;
+export const bb26IncrementInvalidInputTest: testObject[] =
+  bb26toDecimalInvalidInputTest;
 
 //setup bb26Compare testing objects
 export const bb26GTLTInputTest: testObject[] = [
@@ -534,4 +540,5 @@ export const bb26DecrementInputTest: testObject[] = bb26IncrementInputTest
   .map((test) => swapFunction(test))
   .map((a) => ({ ...a }));
 bb26DecrementInputTest.push({ input: "A", result: "A" });
-export const bb26DecrementInvalidInputTest: testObject[] = bb26toDecimalInvalidInputTest;
+export const bb26DecrementInvalidInputTest: testObject[] =
+  bb26toDecimalInvalidInputTest;

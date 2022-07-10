@@ -5,7 +5,7 @@ import { bb26RandomInputTest, bb26RandomInvalidInputTest } from "./testObjects";
 import { bb26Random } from "../src/index";
 import { numberbb26Random } from "../src/index";
 
-let numberOfIterations = 1000;
+const numberOfIterations = 1000;
 
 function binarySearch(arr, target) {
   //if array is size 1
@@ -40,7 +40,7 @@ describe("#bb26Random", function () {
     context("with argument " + input.a + ", " + input.b, function () {
       const { a, b } = input;
       for (let i = 0; i < numberOfIterations; i++) {
-        let value = checkNumberOfArgs(a, b, bb26Random);
+        const value = checkNumberOfArgs(a, b, bb26Random);
         it(
           "should return " +
             "with: " +
@@ -87,7 +87,12 @@ describe("#numberbb26Random", function () {
       function () {
         const { a, b } = input;
         for (let i = 0; i < numberOfIterations; i++) {
-          let value = checkNumberOfArgs(a, b, numberbb26Random, bb26ToDecimal);
+          const value = checkNumberOfArgs(
+            a,
+            b,
+            numberbb26Random,
+            bb26ToDecimal
+          );
           it(
             "should return " +
               "with: " +
@@ -109,7 +114,7 @@ describe("#numberbb26Random", function () {
 
   context("with argument " + 5 + ", " + 1000, function () {
     for (let i = 0; i < numberOfIterations; i++) {
-      let value = bb26ToDecimal(numberbb26Random(1000, 5));
+      const value = bb26ToDecimal(numberbb26Random(1000, 5));
       it(
         "should return a random number " +
           "between: " +

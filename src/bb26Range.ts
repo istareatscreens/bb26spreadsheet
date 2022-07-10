@@ -15,7 +15,7 @@ export default function bb26Range(a: string, b: string = ""): string[] {
     throw new TypeError("Input strings may only contain upper case letters");
   //variable configuration
   if (a == b || (a === "A" && b === "")) return [a];
-  let stringArr: string[] = ["A"];
+  const stringArr: string[] = ["A"];
   let U: string = a;
   if (b !== "") {
     if (bb26Compare(a, b) === 1) {
